@@ -1,0 +1,9 @@
+T=int(input("Enter no.of test cases: "))
+print(T)
+for i in range(T):
+   AA,BB=map(int,input("Enter 2 values: ").split(","))
+   print(AA,",",BB)
+   if BB==00:
+      print("Error: Division by zero")
+   else:
+      print(AA/BB)
