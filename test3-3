@@ -1,0 +1,20 @@
+T=int(input("Enter no.of Test cases:"))
+for i in range(T):
+   invent=input("Enter fruits:count :").split(" ")
+   rfru,quan=input("Enter fruit:quantity :").split(":")
+   for fru in invent:
+      fruit,count=fru.split(":")
+      c=int(count)
+      q=int(quan)
+      if rfru == fruit:
+         if q>c:
+            print("Error: Insufficient stock for",fruit)
+            break
+         else:
+            c=c-q
+            count=c
+            print(invent)
+            break
+      else:
+         continue
+   print("Error:",rfru," is not available in the inventory")
