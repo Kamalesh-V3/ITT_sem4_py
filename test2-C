@@ -1,0 +1,17 @@
+T=int(input("Enter no.of Test Cases: "))
+if(T>=1 and T<=100):
+   for i in range(T):
+      print()
+      print("Enter the Input ",i+1,": ")
+      dateS,timeS=input("Enter start date and time: ").split(' ')
+      DDS,MMS,YYYYS=map(int,dateS.split('-'))
+      hhS,mmS,ssS=map(int,timeS.split(':'))
+      if(0<DDS<31 and 0<MMS<13 and 2000<YYYYS<2100):
+         dateE,timeE=input("Enter end date and time  : ").split(' ')
+         DDE,MME,YYYYE=map(int,dateE.split('-'))
+         hhE,mmE,ssE=map(int,timeE.split(':'))
+         if(0<DDE<31 and 0<MME<13 and 2000<YYYYE<2100)and(MMS==MME and YYYYS==YYYYE):
+            if(dateS==dateE):
+               print("Duration: ",hhE-hhS," hours")
+            else:
+               print("Duration: ",hhE-hhS+24," hours")
