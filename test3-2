@@ -1,0 +1,34 @@
+T=int(input("Enter no.of test cases: "))
+ALP=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+alp=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+for i in range(T):
+   pw=input("Enter your password: ")
+   print(pw)
+   l=len(pw)
+   lc=uc=dg=sp=bs=0
+   if l<8:
+      print("Error: Too short")
+   else:
+      for j in pw:
+         if j in alp:
+            lc=lc+1
+         elif j in ALP:
+            uc=uc+1
+         elif j in "@,#,$,!,^,*,_,%,&":
+            sp=sp+1
+         elif j == " ":
+            bs=bs+1
+         else:
+            dg=dg+1
+      if lc==0:
+         print("Error: Missing lowercase letter")
+      elif uc==0:
+         print("Error: Missing uppercase letter")
+      elif bs!=0:
+         print("Error: Contains space")
+      elif sp==0:
+         print("Error: Invalid special character")
+      elif dg==0:
+         print("Error: Missing digit")
+      else:
+         print("Valid Password")
