@@ -1,0 +1,20 @@
+array=list(map(int,input("Enter elements: ").split(' ')))
+print("\nYour List is,\n",array)
+l=len(array)
+print()
+k=int(input("Enter the k value: "))
+if k>l:
+   print("Invalid k value !!!")
+else:
+   maxsum=0
+   for i in range(0,l):
+      for j in range(i,l+1):
+         subarray=array[i:j]
+         if len(subarray)>=k:
+            print(subarray)
+            if sum(subarray)>maxsum:
+               maxsum=sum(subarray)
+               maxarray=subarray
+print("======================")
+print("Max Sum     : ",maxsum)
+print("The subarray: ",maxarray,"\n")
