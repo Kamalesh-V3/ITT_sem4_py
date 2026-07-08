@@ -1,0 +1,18 @@
+T=int(input("Enter no.of Test Cases: "))
+if(T>=1 and T<=100):
+   for i in range(T):
+      print()
+      print("Enter the Input ",i+1,": ")
+      IP=input("Enter IP Address: ")
+      l=len(IP)
+      if(l>15):
+         print("INVALID")
+      else:
+         cd=0
+         for i in IP:
+            if i=='.':
+               cd=cd+1
+         if cd!=3:
+            print("INVALID")
+         else:
+            print("VALID")
