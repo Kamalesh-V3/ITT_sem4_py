@@ -1,0 +1,48 @@
+//Date: 18/03/2026
+//Program to find min and max sum when the person reads sometimes 5 as 6 and vice versa.
+
+num1=input("Enter num1:")
+num2=input("Enter num2:")
+print("Numbers are:")
+print(num1," and ",num2)
+n1=int(num1)
+n2=int(num2)
+sum1=n1+n2
+print("Sum:",sum1)
+count=0
+for i in num2:
+    if i=="7"and count==0:
+        num2=num2.replace('7','1')
+        count=count+1
+    elif i=="5":
+        num2=num2.replace('5','6')
+        count=count+1
+    elif i=="3" and count==1:
+        num2=num2.replace('3','8')
+        count=count+1
+    else:
+        count=count+1
+print("After misread the Numbers are:")
+print(num1," and ",num2)
+n3=int(num1)
+n4=int(num2)
+sum2=n3+n4
+print("Sum:",sum2)
+if sum1>sum2:
+    print("MAX sum : ",sum1)
+    print("MIN sum : ",sum2)
+else:
+    print("MAX sum : ",sum2)
+    print("MIN sum : ",sum1)
+
+//output
+Enter num1:86
+Enter num2:753
+Numbers are:
+86  and  753
+Sum: 839
+After misread the Numbers are:
+86  and  163
+Sum: 249
+MAX sum :  839
+MIN sum :  249
