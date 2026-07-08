@@ -1,0 +1,36 @@
+print("--------Prime list separator---------")
+
+#getting input
+list1=[]
+n=int(input("Enter the No.of elements:"))
+for i in range(n):
+   ele=int(input("Enter value:"))
+   list1.append(ele)
+print("Initial List : ",list1)
+l=len(list1)
+
+#defining a function to chech prime or not
+def is_prime(num):
+   for i in range(2,num):
+      if num%i==0:
+         return 1
+      else:
+         return 0
+
+#list separations
+list2=[]
+for i in range(0,n-1):
+   num=list1[i]
+   if(is_prime(num)==1):
+      list2.append(list1[i])
+      list1.remove(list1[i])
+print("List 1 ( prime ): ",list1)
+print("List 2 ( non-prime ): ",list2)
+
+#percentage calculation
+a=len(list1)
+b=len(list2)
+per1=((l-a)/l)*100
+per2=100-per1
+print("Totally ",per1,"% of elements in the initial list is prime")
+print("And ",per2,"% of elements are non-prime")
