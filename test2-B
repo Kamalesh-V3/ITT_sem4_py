@@ -1,0 +1,14 @@
+T=int(input("Enter no.of Test Cases: "))
+if(T>=1 and T<=100):
+   for i in range(T):
+      print()
+      print("Enter the Input ",i+1,": ")
+      X,Y=map(int,input("Enter X and Y value: ").split(' '))
+      if(1<=X and Y<=100):
+         print(X," ",Y)
+         if(X>Y):
+            print("SECOND")
+         elif (X<Y):
+            print("FIRST")
+         else:
+            print("ANY")
