@@ -1,0 +1,31 @@
+print("------String weightage------")
+
+#getting a sentence
+sent=input("Enter the sentence: ")
+print("The sentence you entered is , ",sent)
+
+#separate the words
+words=sent.split()
+print("\nThe words in sentence are : ", words)
+
+#function to count vowels
+def count_vowels(word):
+   vowels = "aeiouAEIOU"
+   count = 0
+   for char in word:
+      if char in vowels:
+         count += 1
+   return count
+print("\n")
+
+#calculating weightage
+maxlen=0
+maxword=""
+for word in words:
+   leng=count_vowels(word)
+   print(word," has weightage ",leng)
+   if leng>maxlen:
+      maxlen=leng
+      maxword=word
+
+print("\nThe maximum weightage is having in, ",maxword," with weightage ",maxlen)
